@@ -1,0 +1,52 @@
+
+body {
+    font-family: sans-serif;
+    background-color: #f7f3f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.ticket {
+    display: flex;
+    background: #fff;
+    border: 3px dashed #333;
+    width: 350px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.ticket:hover {
+    transform: scale(1.02);
+}
+
+.left, .right {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left {
+    flex: 3;
+    border-right: 2px dashed #333;
+}
+
+.right {
+    flex: 1;
+    text-align: center;
+    background-color: #ffe9d6;
+}
+
+.torn {
+    animation: robek 0.7s forwards;
+}
+
+@keyframes robek {
+    to {
+        transform: scale(0) rotate(360deg);
+        opacity: 0;
+    }
+}
